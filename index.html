@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cyh的个人主页</title>
+
+    <!-- 在<head>标签最前面添加这行 Font Awesome支持-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <title>Lemon-Tree 的个人主页</title>
     <style>
         /* 基础样式 */
         * {
@@ -95,6 +99,48 @@
                 margin: 10px 0;
             }
         }
+
+        .section {
+    margin-bottom: 1.5rem;
+}
+
+#projects h2 {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+}
+
+.project-item {
+    margin: 1.2rem 0;
+}
+
+.project-item h3 {
+    color: #34495e;
+    margin: 0.8rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.date {
+    color: #7f8c8d;
+    font-weight: normal;
+}
+
+.project-details {
+    padding-left: 1.5rem;
+    margin: 0.5rem 0;
+}
+
+.project-details li {
+    margin: 0.4rem 0;
+    line-height: 1.6;
+}
+
+.fas.fa-suitcase {
+    margin-right: 0.8rem;
+    color: #3498db;
+}
+
     </style>
 </head>
 <body>
@@ -107,8 +153,8 @@
 
     <div class="header">
         <img src="images/avatar.jpg" alt="头像" class="avatar">
-        <h1>张三</h1>
-        <p>计算机科学在读学生</p>
+        <h1>Lemon-Tree</h1>
+        <p>计算机科学与技术在读学生</p>
     </div>
 
     <div class="section" id="about">
@@ -119,7 +165,7 @@
     <div class="section" id="education">
         <h2>教育背景</h2>
         <div class="education-item">
-            <h3>大学 (2021-2025)</h3>
+            <h3>南京信息工程大学 (2021-2025)</h3>
             <p>计算机科学与技术系</p>
             <p>相关课程：数据结构、算法设计、数据库系统、机器学习</p>
         </div>
@@ -128,23 +174,36 @@
     <div class="section" id="skills">
         <h2>技术技能</h2>
         <span class="skill-tag">Python</span>
-        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">C++</span>
         <span class="skill-tag">HTML/CSS</span>
         <span class="skill-tag">SQL</span>
         <span class="skill-tag">Git</span>
     </div>
-
+    
     <div class="section" id="projects">
-        <h2>项目经历</h2>
-        <div class="education-item">
-            <h3>校园二手交易平台 (2023.12)</h3>
-            <p>使用Vue.js + Django开发，实现商品发布、在线聊天功能</p>
-        </div>
-        <div class="education-item">
-            <h3>图书馆管理系统 (2023.06)</h3>
-            <p>基于Flask的Web应用，支持图书检索与借阅管理</p>
-        </div>
+    <h2><i class="fas fa-suitcase"></i> 项目经历</h2>
+
+    <div class="project-item">
+        <h3>多模态图像智能分析系统（LLaVA架构）<span class="date">2024.12 - 至今</span></h3>
+        <ul class="project-details">
+            <li><strong>模型：</strong>基于LLaVA框架改进视觉模块，尝试CLIP与ResNet特征融合方案</li>
+            <li><strong>训练：</strong>使用HuggingFace工具进行模型微调，探索LoRA轻量化方法</li>
+            <li><strong>开发：</strong>搭建React+Flask演示系统，实现图像问答基础功能</li>
+            <li><strong>部署：</strong>通过ONNX工具实现模型转换，完成基础服务化部署</li>
+        </ul>
     </div>
+
+    <div class="project-item">
+        <h3>区块链跨链应用开发 <span class="date">2023.4 - 2024.4</span></h3>
+        <ul class="project-details">
+            <li><strong>架构：</strong>基于Substrate实现以太坊与Fabric链间资产转移基础功能</li>
+            <li><strong>合约：</strong>开发新能源汽车链上交易合约（Solidity/Remix）</li>
+            <li><strong>平台：</strong>搭建React+Node.js交易演示系统（集成MetaMask）</li>
+            <li><strong>成果：</strong>省级课题结题（团队第一负责人）</li>
+        </ul>
+    </div>
+</div>
+
 
     <div class="contact">
         <p>📧 yuhengchennj@163.com | 💻 https://github.com/MRchenyuheng</p>
