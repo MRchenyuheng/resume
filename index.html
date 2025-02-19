@@ -3,96 +3,252 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- 在<head>标签最前面添加这行 Font Awesome支持-->
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/award.css">
+    <!-- 自定义样式 -->
+    <link rel="stylesheet" href="styles/custom.css">
+    <link rel="stylesheet" href="styles/related_links.css">
+    
     <title>Lemon-Tree 的个人主页</title>
 </head>
-<body>
-    <nav>
-        <a href="#education">教育</a>
-        <a href="#skills">技能</a>
-        <a href="#projects">项目</a>
+<body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm mb-5">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item mx-2"><a class="nav-link" href="#education">教育</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link" href="#skills">技能</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link" href="#projects">项目</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link" href="#awards">荣誉</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link" href="#links">链接</a></li>
+                </ul>
+            </div>
+        </div>
     </nav>
 
-    <div class="header">
-        <img src="images/avatar.jpg" alt="头像" class="avatar">
-        <h1>Lemon-Tree</h1>
-        <p>计算机科学与技术在读学生</p>
-    </div>
+    <main class="container">
+        <!-- 头部信息 -->
+        <header class="text-center mb-5">
+            <img src="images/avatar.png" alt="头像" class="rounded-circle shadow mb-3" style="width: 150px; height: 150px;">
+            <h1 class="display-5 fw-bold">Lemon-Tree</h1>
+            <p class="lead text-muted">计算机科学与技术在读学生</p>
+        </header>
 
+        <!-- 教育背景 -->
+        <section class="card mb-4 shadow-sm" id="education">
+            <div class="card-body">
+                <h2 class="card-title h4"><i class="fas fa-graduation-cap me-2 text-primary"></i>教育背景</h2>
+                <div class="mt-3">
+                    <h3 class="h5">南京信息工程大学 (2021-2025)</h3>
+                    <p class="mb-1">计算机科学与技术系</p>
+                    <p class="text-muted">相关课程：数据结构、算法设计、数据库系统、机器学习</p>
+                </div>
+            </div>
+        </section>
 
-    <div class="section" id="education">
-        <h2>教育背景</h2>
-        <div class="education-item">
-            <h3>南京信息工程大学 (2021-2025)</h3>
-            <p>计算机科学与技术系</p>
-            <p>相关课程：数据结构、算法设计、数据库系统、机器学习</p>
+        <!-- 项目经历 1-->
+        <section class="card mb-4 shadow-sm" id="projects">
+            <div class="card-body">
+                <h2 class="card-title h4"><i class="fas fa-suitcase me-2 text-success"></i>项目经历</h2>
+                
+                <div class="mt-3">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h3 class="h5 mb-0">多模态图像智能分析系统（LLaVA架构）</h3>
+                                <span class="badge bg-primary">2024.12 - 至今</span>
+                            </div>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2"><strong>模型：</strong>基于LLaVA框架改进视觉模块，尝试CLIP与ResNet特征融合方案</li>
+                                <li class="mb-2"><strong>训练：</strong>使用HuggingFace工具进行模型微调，探索LoRA轻量化方法</li>
+                                <li class="mb-2"><strong>开发：</strong>搭建React+Flask演示系统，实现图像问答基础功能</li>
+                                <li><strong>部署：</strong>通过ONNX工具实现模型转换，完成基础服务化部署</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+             <!-- 项目经历 2-->
+
+            <div class="card-body">
+                <!-- <h2 class="card-title h4"><i class="fas fa-suitcase me-2 text-success"></i>项目经历</h2> -->
+                
+                <div class="mt-3">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h3 class="h5 mb-0">区块链跨链应用开发（省级课题）</h3>
+                                <span class="badge bg-primary">2023.4 - 2024.4</span>
+                            </div>
+                            <ul class="list-unstyled mt-3">
+                                <li class="mb-2"><strong>架构：</strong>基于Substrate实现以太坊与Fabric链间资产转移基础功能</li>
+                                <li class="mb-2"><strong>合约：</strong>开发新能源汽车链上交易合约（Solidity/Remix） </li>
+                                <li class="mb-2"><strong>平台：</strong>搭建React+Node.js交易演示系统（集成MetaMask）</li>
+                                <li><strong>成果：</strong>省级课题结题（团队第一负责人）</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+       
+        
+
+        <!-- index.html -->
+<section class="container my-5" id="awards">
+    <h2 class="mb-4">
+        <i class="fas fa-trophy me-2 text-warning"></i>
+        获奖情况
+    </h2>
+
+    <!-- 程序设计竞赛铜牌 -->
+    <div class="award-item card mb-3 border-start border-3 border-primary">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+                <h3 class="h5 mb-0">“齐鲁软件园杯”2024年中国大学生程序设计竞赛全国邀请赛（山东）</h3>
+                <div class="text-end">
+                    <span class="badge bg-primary">铜牌</span>
+                    <div class="text-muted small mt-1">2024.05</div>
+                </div>
+            </div>
         </div>
     </div>
-    
-    <div class="section" id="projects">
-    <h2><i class="fas fa-suitcase"></i> 项目经历</h2>
 
-    <div class="project-item">
-        <h3>多模态图像智能分析系统（LLaVA架构）<span class="date">2024.12 - 至今</span></h3>
-        <ul class="project-details">
-            <li><strong>模型：</strong>基于LLaVA框架改进视觉模块，尝试CLIP与ResNet特征融合方案</li>
-            <li><strong>训练：</strong>使用HuggingFace工具进行模型微调，探索LoRA轻量化方法</li>
-            <li><strong>开发：</strong>搭建React+Flask演示系统，实现图像问答基础功能</li>
-            <li><strong>部署：</strong>通过ONNX工具实现模型转换，完成基础服务化部署</li>
-        </ul>
+    <!-- 省级竞赛金牌 -->
+    <div class="award-item card mb-3 border-start border-3 border-danger">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+                <h3 class="h5 mb-0">“华为杯”2024江苏省大学生程序设计大赛</h3>
+                <div class="text-end">
+                    <span class="badge bg-danger">金牌</span>
+                    <div class="text-muted small mt-1">2024.05</div>
+                </div>
+            </div>
+        </div>
     </div>
 
-    <div class="project-item">
-        <h3>区块链跨链应用开发 <span class="date">2023.4 - 2024.4</span></h3>
-        <ul class="project-details">
-            <li><strong>架构：</strong>基于Substrate实现以太坊与Fabric链间资产转移基础功能</li>
-            <li><strong>合约：</strong>开发新能源汽车链上交易合约（Solidity/Remix）</li>
-            <li><strong>平台：</strong>搭建React+Node.js交易演示系统（集成MetaMask）</li>
-            <li><strong>成果：</strong>省级课题结题（团队第一负责人）</li>
-        </ul>
+    <!-- 校内荣誉 -->
+    <div class="award-item card mb-3 border-start border-3 border-success">
+        <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+                <h3 class="h5 mb-0">南京信息工程大学 一等奖学金 &amp; 三好学生</h3>
+                <div class="text-end">
+                    <span class="badge bg-success">双项荣誉</span>
+                    <div class="text-muted small mt-1">2022.09</div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
+</section>
 
-<div class="section" id="awards">
-    <h2><i class="fas fa-trophy"></i> 荣誉</h2>
+        <!-- 技能 -->
+        <section class="card mb-4 shadow-sm" id="skills">
+            <div class="card-body">
+                <h2 class="card-title h4"><i class="fas fa-code me-2 text-danger"></i>技术技能</h2>
+                <div class="mt-3">
+                    <span class="badge rounded-pill bg-primary me-2 mb-2">Python</span>
+                    <span class="badge rounded-pill bg-primary me-2 mb-2">C++</span>
+                    <span class="badge rounded-pill bg-primary me-2 mb-2">HTML/CSS</span>
+                    <span class="badge rounded-pill bg-primary me-2 mb-2">SQL</span>
+                    <span class="badge rounded-pill bg-primary me-2 mb-2">Git</span>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <div class="award-item">
-        <h3>“齐鲁软件园杯”中国大学生程序设计竞赛全国邀请赛（山东） 铜牌<span class="date">2024.5</span></h3>
+<!-- 更新后的链接卡片布局 -->
+<section class="container mt-5" id="links">
+    <h2 class="mb-4">
+        <i class="fas fa-external-link-alt me-2 text-info"></i>
+        相关链接
+    </h2>
+
+    <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
+
+        <!-- GitHub -->
+        <div class="col">
+            <div class="link-card card h-100 border-start border-3 border-dark shadow-hover">
+                <div class="card-body d-flex align-items-center">
+                    <div class="icon-wrapper flex-shrink-0 me-3">
+                        <i class="fab fa-github fa-fw fa-2x text-dark"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                        <h3 class="h5 mb-1">GitHub</h3>
+                        <p class="text-muted small mb-0">开源项目仓库</p>
+                    </div>
+
+                    <a href="https://github.com/MRchenyuheng"
+                    class="stretched-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="在新窗口打开Codeforces主页">
+                   </a>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- 知乎 -->
+        <div class="col">
+            <div class="link-card card h-100 border-start border-3 border-info shadow-hover">
+                <div class="card-body d-flex align-items-center">
+                    <div class="icon-wrapper flex-shrink-0 me-3">
+                        <i class="fab fa-zhihu fa-fw fa-2x text-info"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                        <h3 class="h5 mb-1">知乎</h3>
+                        <p class="text-muted small mb-0">技术文章分享</p>
+                    </div>
+                    <a href="https://www.zhihu.com/people/mo-chen-51-65"
+                    class="stretched-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="在新窗口打开知乎主页">
+                   </a>
+                </div>
+            </div>
+        </div>
+
+          <!-- Codeforces -->
+        <div class="col">
+            <div class="link-card card h-100 border-start border-3 border-warning shadow-hover">
+                <div class="card-body d-flex align-items-center">
+                    <div class="icon-wrapper flex-shrink-0 me-3">
+                        <i class="fas fa-chart-line fa-fw fa-2x text-warning"></i>
+                    </div>
+                    <div class="flex-grow-1">
+                        <h3 class="h5 mb-1">Codeforces</h3>
+                        <p class="text-muted small mb-0">算法竞赛记录</p>
+                    </div>
+                    <a href="#" class="stretched-link"></a>
+                </div>
+            </div>
+        </div>
     </div>
-
-    <div class="award-item">
-        <h3>“华为杯”2024江苏省大学生程序设计大赛 金牌<span class="date">2024.5</span></h3>
-    </div>
-
-    <div class="award-item">
-        <h3>南京信息工程大学 一等奖学金<span class="date">2022.9</span></h3>
-    </div>
-
-    <div class="award-item">
-        <h3>南京信息工程大学 三好学生<span class="date">2022.9</span></h3>
-    </div>
-</div>
+</section>
 
 
-<div class="section" id="skills">
-    <h2>技术技能</h2>
-    <span class="skill-tag">Python</span>
-    <span class="skill-tag">C++</span>
-    <span class="skill-tag">HTML/CSS</span>
-    <span class="skill-tag">SQL</span>
-    <span class="skill-tag">Git</span>
-</div>
 
+    <!-- 联系方式 -->
+    <footer class="bg-white py-4 mt-5 shadow-sm">
+        <div class="container text-center">
+            <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
+                <p class="mb-0"><i class="fas fa-envelope me-2"></i>yuhengchennj@163.com</p>
+                <p class="mb-0"><i class="fab fa-github me-2"></i>github.com/MRchenyuheng</p>
+                <p class="mb-0"><i class="fas fa-phone me-2"></i>(+86) 123-1234-5678</p>
+            </div>
+        </div>
+    </footer>
 
-    <div class="contact">
-        <p>📧 yuhengchennj@163.com | 💻 https://github.com/MRchenyuheng</p>
-        <p>📱 (+86) 123-1234-5678</p>
-    </div>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-
-
 </html>

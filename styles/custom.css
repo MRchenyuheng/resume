@@ -1,0 +1,85 @@
+/* styles/custom.css */
+/* 自定义样式覆盖 */
+
+/* 卡片标题样式 */
+.card-title {
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+/* 项目列表样式 */
+.list-unstyled li {
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.list-unstyled li::before {
+    content: "•";
+    color: #0d6efd;
+    position: absolute;
+    left: 0;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    
+    .display-5 {
+        font-size: 2rem;
+    }
+}
+
+/* 头像响应式 */
+@media (max-width: 576px) {
+    .rounded-circle {
+        width: 100px !important;
+        height: 100px !important;
+    }
+}
+
+/* 联系信息间距 */
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+
+/* styles/awards.css */
+/* 基础样式 */
+.award-item {
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    border-left-width: 4px !important;
+}
+
+/* 鼠标悬停效果 */
+.award-item:hover {
+    transform: translateX(8px);
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+}
+
+/* 徽章圆角处理 */
+.award-item .badge {
+    border-radius: 15px;
+    padding: 0.5em 1em;
+}
+
+/* 移动端适配 */
+@media (max-width: 768px) {
+    .award-item .d-flex {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    
+    .award-item .text-end {
+        width: 100%;
+        margin-top: 1rem;
+        text-align: left !important;
+    }
+    
+    .award-item h3 {
+        font-size: 1.1rem;
+    }
+}
+
