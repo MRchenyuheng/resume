@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>张三的个人主页</title>
+    <style>
+        /* 基础样式 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        /* 导航栏 */
+        nav {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        /* 头部信息 */
+        .header {
+            text-align: center;
+            margin: 40px 0;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            border: 3px solid #3498db;
+        }
+
+        /* 内容模块 */
+        .section {
+            background: white;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #3498db;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* 教育背景 */
+        .education-item {
+            margin-bottom: 20px;
+        }
+
+        /* 技能标签 */
+        .skill-tag {
+            display: inline-block;
+            background: #e0f2fe;
+            color: #0c4a6e;
+            padding: 5px 12px;
+            border-radius: 15px;
+            margin: 5px;
+        }
+
+        /* 联系方式 */
+        .contact {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+            nav a {
+                display: block;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#about">关于</a>
+        <a href="#education">教育</a>
+        <a href="#skills">技能</a>
+        <a href="#projects">项目</a>
+    </nav>
+
+    <div class="header">
+        <img src="avatar.jpg" alt="头像" class="avatar">
+        <h1>张三</h1>
+        <p>计算机科学在读学生</p>
+    </div>
+
+    <div class="section" id="about">
+        <h2>关于我</h2>
+        <p>计算机科学与技术系大三学生，对前端开发和数据分析感兴趣，喜欢通过项目实践学习新技术。</p>
+    </div>
+
+    <div class="section" id="education">
+        <h2>教育背景</h2>
+        <div class="education-item">
+            <h3>大学 (2021-2025)</h3>
+            <p>计算机科学与技术系 · GPA 3.8/4.0</p>
+            <p>相关课程：数据结构、算法设计、数据库系统、机器学习</p>
+        </div>
+    </div>
+
+    <div class="section" id="skills">
+        <h2>技术技能</h2>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">JavaScript</span>
+        <span class="skill-tag">HTML/CSS</span>
+        <span class="skill-tag">SQL</span>
+        <span class="skill-tag">Git</span>
+    </div>
+
+    <div class="section" id="projects">
+        <h2>项目经历</h2>
+        <div class="education-item">
+            <h3>校园二手交易平台 (2023.12)</h3>
+            <p>使用Vue.js + Django开发，实现商品发布、在线聊天功能</p>
+        </div>
+        <div class="education-item">
+            <h3>图书馆管理系统 (2023.06)</h3>
+            <p>基于Flask的Web应用，支持图书检索与借阅管理</p>
+        </div>
+    </div>
+
+    <div class="contact">
+        <p>📧 zhang.san@example.com | 💻 github.com/zhangsan</p>
+        <p>📱 (+86) 138-1234-5678</p>
+    </div>
+</body>
+</html>
